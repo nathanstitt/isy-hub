@@ -1,5 +1,5 @@
-
 # isy-js
+
 
 (C) Rod Toll 2015-2017, Licensed under the MIT-LICENSE. Additional development work by pradeepmouli, 2018-
 
@@ -21,7 +21,7 @@ Testing
 
 If you wish to test the library against a simulator I recommend fake-isy-994i project. (Full disclosure, I use it to test this library). For more details see https://github.com/rodtoll/fake-isy-994i/.
 
-There is a mocha based set of tests in the tests directory now. Install and run the fake-isy-994i project in the background and then you can use npm test from the root directory of your enlistment to check for issues. 
+There is a mocha based set of tests in the tests directory now. Install and run the fake-isy-994i project in the background and then you can use npm test from the root directory of your enlistment to check for issues.
 
 Travis CI is used for CI. You can see the .travis.yml to see the config used to run the tests.
 
@@ -33,7 +33,7 @@ Features
 * Automatic updating of current state of devices while operating.
 * Change notifications when device state changes.
 * Support for elk connected alarm.
-* Support for elk sensors. 
+* Support for elk sensors.
 * Support for scenes
 * Support for generic devices through ISYBaseDevice
 * Support for variables (thanks @bdstark)
@@ -120,12 +120,12 @@ Constants:
 * `DEVICE_TYPE_SECURE_LOCK` - Indicates a zwave lock device.
 * `DEVICE_TYPE_LIGHT` - Indicates a light, non-dimmable device type.
 * `DEVICE_TYPE_DIMMABLE_LIGHT` - Indicates a dimmable light device type.
-* `DEVICE_TYPE_OUTLET` - Indicates a outlet device type. 
-* `DEVICE_TYPE_FAN` - Indicates a fan device type. 
+* `DEVICE_TYPE_OUTLET` - Indicates a outlet device type.
+* `DEVICE_TYPE_FAN` - Indicates a fan device type.
 * `DEVICE_TYPE_DOOR_WINDOW_SENSOR` - Indicates a door/window sensor device type.
 * `DEVICE_TYPE_ALARM_DOOR_WINDOW_SENSOR` - Indicates an elk door/window sensor device type.
 * `DEVICE_TYPE_CO_SENSOR` - Indicates an Elk CO sensor device type.
-* `DEVICE_TYPE_ALARM_PANEL` - Indicates an Elk alarm panel device type. 
+* `DEVICE_TYPE_ALARM_PANEL` - Indicates an Elk alarm panel device type.
 * `DEVICE_TYPE_MOTION_SENSOR` - Indicates an Insteon motion sensor
 * `DEVICE_TYPE_SCENE` - Indicates an Insteon scene
 * `VARIABLE_TYPE_INTEGER` - Indicates that the variable is of type integer
@@ -163,7 +163,7 @@ Properties:
 
 The sendXXXCommand are functions which tell the device to move the specified state. The local device will not update it's state until the ISY has acknowledged the change. To get the last acknowledged state call the getXXXXState commands.
 
-The resultCallback parameter specifies a required callback that will specify true if the command succeeded, false otherwise. 
+The resultCallback parameter specifies a required callback that will specify true if the command succeeded, false otherwise.
 
 ### ISYLightDevice
 
@@ -205,7 +205,7 @@ NOTE: You cannot dim scenes. ISY does not support it.
 
 ### ISYLockDevice
 
-Represents a ZWave Lock or a MorningLinc connected Lock. 
+Represents a ZWave Lock or a MorningLinc connected Lock.
 
 Functions:
 * `getCurrentLockState()` - Gets the current locked state of the lock device. true for locked, false for unlocked.
@@ -213,18 +213,18 @@ Functions:
 
 ### ISYOutletDevice
 
-Represents an Insteon ApplianceLinc or LampLinc. 
+Represents an Insteon ApplianceLinc or LampLinc.
 
 Functions:
 * `getCurrentOutletState()` - Gets the current state of the outlet. true for on, false for off.
-* `sendOutletCommand(state,resultCallback(success))` - Sends the command to set the outlet state to the specified state. true to turn it on, false to turn it off. 
+* `sendOutletCommand(state,resultCallback(success))` - Sends the command to set the outlet state to the specified state. true to turn it on, false to turn it off.
 
 ### ISYFanDevice
 
-Represents an Insteon fan device. 
+Represents an Insteon fan device.
 
 Functions:
-* `getCurrentFanState()`- Gets the current state of the fan. See the FAN_XXX constants for possible values. 
+* `getCurrentFanState()`- Gets the current state of the fan. See the FAN_XXX constants for possible values.
 * `sendFanCommand(state,resultCallback(success))` - Sends the command to set the fan state to the specified state. See the FAN_XXX constants for possible values.
 
 Constants:
@@ -235,10 +235,10 @@ Constants:
 
 ### ISYDoorWindowDevice
 
-Represents an Insteon door/window sensor like I/O Linc, TriggerLinc. 
+Represents an Insteon door/window sensor like I/O Linc, TriggerLinc.
 
 Functions:
-* `getCurrentDoorWindowState()` - Gets the current state of the door window sensor. true is open, false is closed. 
+* `getCurrentDoorWindowState()` - Gets the current state of the door window sensor. true is open, false is closed.
 
 ### ISYMotionSensorDevice
 
@@ -250,7 +250,7 @@ Functions:
 
 ### ELKAlarmSensor
 
-Represents a door/window sensor connected via wired or wireless to the Elk alarm panel. 
+Represents a door/window sensor connected via wired or wireless to the Elk alarm panel.
 
 Functions:
 * `sendBypassToggleCommand()` - Sends a command to toggle if device is bypassed or not
@@ -271,10 +271,10 @@ Constants:
 
 ### ElkAlarmPanel
 
-Represents an Elk alarm panel. One is available per isy when elk is present. Only area 1 is supported. 
+Represents an Elk alarm panel. One is available per isy when elk is present. Only area 1 is supported.
 
 Functions:
-* `sendSetAlarmModeCommand(mode)` - Sends the command to the alarm system to arm in the specified mode. See getAlarmMode() for possible values. 
+* `sendSetAlarmModeCommand(mode)` - Sends the command to the alarm system to arm in the specified mode. See getAlarmMode() for possible values.
 * `clearAllBypasses()` - Clears all current bypasses.
 * `getAlarmTripState()` - Returns the current alarm trip state. Possible values are ElkAlarmPanel.ALARM_TRIP_STATE_XXXX.
 * `getAlarmState()` - Returns the current alarm state. Possible values are ElkAlarmPanel.ALARM_STATE_XXXX.
@@ -295,7 +295,7 @@ Constants:
 * `ALARM_STATE_READY_TO_ARM` - Current state of the alarm is ready to arm.
 * `ALARM_STATE_READY_TO_ARM_VIOLATION` - Current state of the alarm is armed with a violation.
 * `ALARM_STATE_ARMED_WITH_TIMER` - Current state of the alarm is armed and counting down.
-* `ALARM_STATE_ARMED_FULLY` - Current state of the alarm is armed. 
+* `ALARM_STATE_ARMED_FULLY` - Current state of the alarm is armed.
 * `ALARM_STATE_FORCE_ARMED_VIOLATION` - Current state of the alarm is armed and has a violation.
 * `ALARM_STATE_ARMED_WITH_BYPASS` - Current state of the alarm is armed with a bypass.
 
@@ -344,7 +344,7 @@ CHANGELOG
 ---------
 
 * 0.4.6 - 2018/05/01 - Development resumed.
-* 0.4.5 - 2017/07/04 - Support suspended. Active development ended. 
+* 0.4.5 - 2017/07/04 - Support suspended. Active development ended.
 * 0.4.4 - 2017/01/14 - Restored chatty scene notifications, logic to quiet them wasn't right. Better chatty and correct then wrong and less chatty.
 * 0.4.3 - 2016/04/09 - Improved error checking to handle errors better. Now handles ISYs with no variables defined.
 * 0.4.2 - 2016/02/15 - Added check to watch for loss of connection. If no notifications are seen in 60 seconds connection is reestablished. Also
