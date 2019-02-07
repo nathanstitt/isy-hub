@@ -1,7 +1,10 @@
-# isy-js
+# isy-hub
 
+(C) Rod Toll 2015-2017, Licensed under the MIT-LICENSE.
 
-(C) Rod Toll 2015-2017, Licensed under the MIT-LICENSE. Additional development work by pradeepmouli, 2018-
+Additional development work by pradeepmouli, 2018
+
+Additional development by Nathan Stitt 2019, re-published on npm as isy-hub
 
 Javascript library for interfacing with the ISY-99i from Universal Devices. (http://www.universal-devices.com).
 
@@ -11,15 +14,15 @@ Getting Started
 First, clone the repository:
 
 ```
-1. $ git clone https://github.com/rodtoll/isy-js.git
-2. $ cd isy-js
+1. $ git clone https://github.com/nathanstitt/isy-hub.git
+2. $ cd isy-hub
 3. $ npm install
 ```
 
 Testing
 -------
 
-If you wish to test the library against a simulator I recommend fake-isy-994i project. (Full disclosure, I use it to test this library). For more details see https://github.com/rodtoll/fake-isy-994i/.
+If you wish to test the library against a simulator I recommend fake-isy-994i project. For more details see https://github.com/rodtoll/fake-isy-994i/.
 
 There is a mocha based set of tests in the tests directory now. Install and run the fake-isy-994i project in the background and then you can use npm test from the root directory of your enlistment to check for issues.
 

@@ -14,6 +14,13 @@
         "connectionType": "Insteon Wired",
         "batteryOperated": false
     }, {
+        "type": "1.26.56.0",
+        "address": "",
+        "name": "(2475D) InLineLinc Dimmer",
+        "deviceType": "DimmableLight",
+        "connectionType": "Insteon Wired",
+        "batteryOperated": false
+    }, {
         "type": "1.0.56.0",
         "address": "",
         "name": "(2456D3) LampLinc v.38",

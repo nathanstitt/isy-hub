@@ -1,17 +1,15 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "target": "es2018",
-        "module": "commonjs",
-        //"allowJs": true,
-        "outDir": "lib",
-        "declaration": true,
-        "declarationDir": "lib",
-        "resolveJsonModule": true
-    },
-    "exclude": [
-        "./lib/*",
-        "./node_modules/*",
-        "./test/*"
-    ]
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "declaration": true,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "./lib/*",
+    "./node_modules/*",
+    "./test/*"
+  ]
 }

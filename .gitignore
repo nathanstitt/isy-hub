@@ -18,4 +18,4 @@ ISYNodes.xml
 .vscode
 .jshintrc
 .eslintrc*
-package-lock.json
+dist
